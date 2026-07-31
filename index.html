@@ -145,9 +145,11 @@
         </div>
     </section>
 
-    <!-- About Preview -->
-    <section class="about-preview section-padding-lg bg-light">
-        <div class="container">
+        <!-- About Preview -->
+    <section class="about-preview section-padding-lg">
+        <div class="about-preview-bg" style="background-image: url('images/experiential_promotions/tusker_1.jpg');"></div>
+        <div class="about-preview-overlay"></div>
+        <div class="container about-preview-container">
             <div class="about-preview-grid">
                 <div class="about-preview-image">
                     <img src="images/logo.webp" alt="Broad Experiential">
@@ -238,7 +240,183 @@
             </div>
         </div>
     </section>
-
+    <!-- Clients / Clientele Section -->
+    <section class="clients-section section-padding-lg bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Partners</span>
+                <h2 class="section-title">Trusted by Leading Brands</h2>
+                <p class="section-description">Organizations that rely on our expertise across East Africa</p>
+            </div>
+            <div class="clients-carousel-wrapper">
+                <div class="clients-track" id="clientsTrack">
+                    <!-- Original set -->
+                    <div class="client-item" data-client="sunking">
+                        <div class="client-logo-wrapper">
+                            <img src="images/clients/sunking.png" alt="Sunking" loading="lazy">
+                            <div class="client-overlay">
+                                <p class="client-description">Affordable Solar Systems</p>
+                                <button class="client-btn">View Work <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <span class="client-name">Sunking</span>
+                    </div>
+                    <div class="client-item" data-client="world-vision">
+                        <div class="client-logo-wrapper">
+                            <img src="images/clients/world_vision.png" alt="World Vision" loading="lazy">
+                            <div class="client-overlay">
+                                <p class="client-description">Helping children across 37 counties</p>
+                                <button class="client-btn">View Work <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <span class="client-name">World Vision</span>
+                    </div>
+                    <div class="client-item" data-client="fresh-life">
+                        <div class="client-logo-wrapper">
+                            <img src="images/clients/freshlife.jfif" alt="Fresh Life" loading="lazy">
+                            <div class="client-overlay">
+                                <p class="client-description">Clean Sanitation Solutions</p>
+                                <button class="client-btn">View Work <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <span class="client-name">Fresh Life</span>
+                    </div>
+                    <div class="client-item" data-client="mgas">
+                        <div class="client-logo-wrapper">
+                            <img src="images/clients/m_gas_logo.jfif" alt="M-Gas" loading="lazy">
+                            <div class="client-overlay">
+                                <p class="client-description">Clean cooking solutions</p>
+                                <button class="client-btn">View Work <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <span class="client-name">M-Gas</span>
+                    </div>
+                    <div class="client-item" data-client="telkom">
+                        <div class="client-logo-wrapper">
+                            <img src="images/clients/telkom-kenya.webp" alt="Telkom Kenya" loading="lazy">
+                            <div class="client-overlay">
+                                <p class="client-description">Leading telecommunications provider</p>
+                                <button class="client-btn">View Work <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <span class="client-name">Telkom Kenya</span>
+                    </div>
+                    <div class="client-item" data-client="uip-real-estate">
+                        <div class="client-logo-wrapper">
+                            <img src="images/clients/uip_real_estate.jfif" alt="UIP Real Estate" loading="lazy">
+                            <div class="client-overlay">
+                                <p class="client-description">Trusted real estate company</p>
+                                <button class="client-btn">View Work <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <span class="client-name">UIP Real Estate</span>
+                    </div>
+                    <div class="client-item" data-client="rachier-and-amollo">
+                        <div class="client-logo-wrapper">
+                            <img src="images/clients/rachier_and_amollo.png" alt="Rachier & Amollo" loading="lazy">
+                            <div class="client-overlay">
+                                <p class="client-description">Nationally recognized law firm</p>
+                                <button class="client-btn">View Work <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <span class="client-name">Rachier & Amollo</span>
+                    </div>
+                    <div class="client-item" data-client="sistema-bio">
+                        <div class="client-logo-wrapper">
+                            <img src="images/clients/sistema_bio.png" alt="Sistema Bio" loading="lazy">
+                            <div class="client-overlay">
+                                <p class="client-description">Biodigester solutions</p>
+                                <button class="client-btn">View Work <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <span class="client-name">Sistema Bio</span>
+                    </div>
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="client-item" data-client="sunking">
+                        <div class="client-logo-wrapper">
+                            <img src="images/clients/sunking.png" alt="Sunking" loading="lazy">
+                            <div class="client-overlay">
+                                <p class="client-description">Affordable Solar Systems</p>
+                                <button class="client-btn">View Work <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <span class="client-name">Sunking</span>
+                    </div>
+                    <div class="client-item" data-client="world-vision">
+                        <div class="client-logo-wrapper">
+                            <img src="images/clients/world_vision.png" alt="World Vision" loading="lazy">
+                            <div class="client-overlay">
+                                <p class="client-description">Helping children across 37 counties</p>
+                                <button class="client-btn">View Work <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <span class="client-name">World Vision</span>
+                    </div>
+                    <div class="client-item" data-client="fresh-life">
+                        <div class="client-logo-wrapper">
+                            <img src="images/clients/freshlife.jfif" alt="Fresh Life" loading="lazy">
+                            <div class="client-overlay">
+                                <p class="client-description">Clean Sanitation Solutions</p>
+                                <button class="client-btn">View Work <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <span class="client-name">Fresh Life</span>
+                    </div>
+                    <div class="client-item" data-client="mgas">
+                        <div class="client-logo-wrapper">
+                            <img src="images/clients/m_gas_logo.jfif" alt="M-Gas" loading="lazy">
+                            <div class="client-overlay">
+                                <p class="client-description">Clean cooking solutions</p>
+                                <button class="client-btn">View Work <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <span class="client-name">M-Gas</span>
+                    </div>
+                    <div class="client-item" data-client="telkom">
+                        <div class="client-logo-wrapper">
+                            <img src="images/clients/telkom-kenya.webp" alt="Telkom Kenya" loading="lazy">
+                            <div class="client-overlay">
+                                <p class="client-description">Leading telecommunications provider</p>
+                                <button class="client-btn">View Work <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <span class="client-name">Telkom Kenya</span>
+                    </div>
+                    <div class="client-item" data-client="uip-real-estate">
+                        <div class="client-logo-wrapper">
+                            <img src="images/clients/uip_real_estate.jfif" alt="UIP Real Estate" loading="lazy">
+                            <div class="client-overlay">
+                                <p class="client-description">Trusted real estate company</p>
+                                <button class="client-btn">View Work <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <span class="client-name">UIP Real Estate</span>
+                    </div>
+                    <div class="client-item" data-client="rachier-and-amollo">
+                        <div class="client-logo-wrapper">
+                            <img src="images/clients/rachier_and_amollo.png" alt="Rachier & Amollo" loading="lazy">
+                            <div class="client-overlay">
+                                <p class="client-description">Nationally recognized law firm</p>
+                                <button class="client-btn">View Work <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <span class="client-name">Rachier & Amollo</span>
+                    </div>
+                    <div class="client-item" data-client="sistema-bio">
+                        <div class="client-logo-wrapper">
+                            <img src="images/clients/sistema_bio.png" alt="Sistema Bio" loading="lazy">
+                            <div class="client-overlay">
+                                <p class="client-description">Biodigester solutions</p>
+                                <button class="client-btn">View Work <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <span class="client-name">Sistema Bio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-background" style="background-image: url('images/wall_branding/vihiga_wallbranding1.jfif')"></div>

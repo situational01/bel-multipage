@@ -811,3 +811,48 @@ window.addEventListener('load', () => {
         }, 500);
     }
 });
+
+// Add this inside the DOMContentLoaded event:
+initClientsCarousel();
+
+// Add this function after initSmoothScroll():
+// ============================================================
+// CLIENTS CAROUSEL
+// ============================================================
+function initClientsCarousel() {
+    const track = document.getElementById('clientsTrack');
+    if (!track) return;
+    
+    // Pause animation when not visible
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                track.style.animationPlayState = 'running';
+            } else {
+                track.style.animationPlayState = 'paused';
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    observer.observe(track);
+    
+    // Pause on hover
+    track.addEventListener('mouseenter', () => {
+        track.style.animationPlayState = 'paused';
+    });
+    
+    track.addEventListener('mouseleave', () => {
+        track.style.animationPlayState = 'running';
+    });
+    
+    // Touch device support
+    track.addEventListener('touchstart', () => {
+        track.style.animationPlayState = 'paused';
+    }, { passive: true });
+    
+    track.addEventListener('touchend', () => {
+        setTimeout(() => {
+            track.style.animationPlayState = 'running';
+        }, 2000);
+    });
+}
