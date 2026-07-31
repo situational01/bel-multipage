@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Broad Experiential Ltd</title>
+    <meta name="description" content="Browse our portfolio of vehicle branding, shop branding, experiential marketing, and printing projects across East Africa.">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar" id="topBar">
+        <div class="container top-bar-container">
+            <div class="top-bar-contact">
+                <a href="tel:+254722636674" class="top-bar-link"><i class="fas fa-phone-alt"></i><span>+254 722 636 674</span></a>
+                <span class="top-bar-divider"></span>
+                <a href="mailto:sales@broadexperiential.com" class="top-bar-link"><i class="fas fa-envelope"></i><span>sales@broadexperiential.com</span></a>
+            </div>
+            <div class="top-bar-social">
+                <a href="https://web.facebook.com/profile.php?id=100083548353383" target="_blank" rel="noopener" aria-label="Facebook" class="top-bar-social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/broadexp?s=20" target="_blank" rel="noopener" aria-label="Twitter" class="top-bar-social-link"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/broad_experiential_ltd" target="_blank" rel="noopener" aria-label="Instagram" class="top-bar-social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/muhindi-vugutza-59523221b/" target="_blank" rel="noopener" aria-label="LinkedIn" class="top-bar-social-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo"><img src="../images/logo.webp" alt="Broad Experiential"></a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Start a Conversation</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <a href="../index.html" class="back-home-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            <span class="page-hero-label">Our Work</span>
+            <h1 class="page-hero-title">Project <span style="color: var(--color-accent);">Gallery</span></h1>
+            <p class="page-hero-description">Browse our portfolio of brand experiences across East Africa</p>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="section-padding-lg">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Vehicle Branding -->
+                <div class="gallery-item" onclick="openGalleryImage(this)">
+                    <img src="../images/car_branding/carbranding3.jpg" alt="Vehicle Branding">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag">Vehicle Branding</span>
+                        <h4>Sunking Fleet Transformation</h4>
+                        <p>Full fleet branding across Kenya</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryImage(this)">
+                    <img src="../images/car_branding/lorrybranding.jpeg" alt="Truck Branding">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag">Vehicle Branding</span>
+                        <h4>M-Gas Logistics Fleet</h4>
+                        <p>Branded trucks delivering clean energy</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryImage(this)">
+                    <img src="../images/car_branding/van3.jpeg" alt="Van Branding">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag">Vehicle Branding</span>
+                        <h4>Telkom Kenya Mobile Campaign</h4>
+                        <p>Branded vans across 37 counties</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryImage(this)">
+                    <img src="../images/car_branding/van.jpeg" alt="Van Branding">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag">Vehicle Branding</span>
+                        <h4>Corporate Fleet Branding</h4>
+                        <p>Professional van wraps</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryImage(this)">
+                    <img src="../images/car_branding/pepsi.jpeg" alt="Pepsi Branding">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag">Vehicle Branding</span>
+                        <h4>Pepsi Fleet Branding</h4>
+                        <p>Bold, recognizable brand presence</p>
+                    </div>
+                </div>
+
+                <!-- Shop Branding -->
+                <div class="gallery-item" onclick="openGalleryImage(this)">
+                    <img src="../images/shop_branding/sunking_shopbranding.jfif" alt="Shop Branding">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag">Shop Branding</span>
+                        <h4>Sunking Retail Experience</h4>
+                        <p>Immersive retail environment</p>
+                    </div>
+                </div>
+
+                <!-- Wall Branding -->
+                <div class="gallery-item" onclick="openGalleryImage(this)">
+                    <img src="../images/wall_branding/vihiga_wallbranding1.jfif" alt="Wall Branding">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag">Wall Branding</span>
+                        <h4>Vihiga County Wall Mural</h4>
+                        <p>Community brand statement</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryImage(this)">
+                    <img src="../images/wall_branding/wallbranding1.jpeg" alt="Wall Branding">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag">Wall Branding</span>
+                        <h4>Urban Wall Branding</h4>
+                        <p>High-impact outdoor visibility</p>
+                    </div>
+                </div>
+
+                <!-- Experiential -->
+                <div class="gallery-item" onclick="openGalleryImage(this)">
+                    <img src="../images/experiential_promotions/captain_morgan.jpg" alt="Experiential">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag">Experiential</span>
+                        <h4>Captain Morgan Road Show</h4>
+                        <p>Immersive brand activation</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryImage(this)">
+                    <img src="../images/experiential_promotions/captain_morgan1.jpg" alt="Experiential">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag">Experiential</span>
+                        <h4>Brand Experience Activation</h4>
+                        <p>Memorable brand connections</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryImage(this)">
+                    <img src="../images/experiential_promotions/tusker_1.jpg" alt="Experiential">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag">Experiential</span>
+                        <h4>Tusker Experiential Campaign</h4>
+                        <p>Product launch activation</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryImage(this)">
+                    <img src="../images/experiential_promotions/exp_1.jpg" alt="Experiential">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag">Experiential</span>
+                        <h4>Trade Show Activation</h4>
+                        <p>Engaging brand experience</p>
+                    </div>
+                </div>
+
+                <!-- Printing -->
+                <div class="gallery-item" onclick="openGalleryImage(this)">
+                    <img src="../images/print/print1.webp" alt="Printing">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag">Printing</span>
+                        <h4>Premium Print Collateral</h4>
+                        <p>High-quality brand materials</p>
+                    </div>
+                </div>
+
+                <!-- Merchandise -->
+                <div class="gallery-item" onclick="openGalleryImage(this)">
+                    <img src="../images/merch/merch_4.jpg" alt="Merchandise">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag">Merchandise</span>
+                        <h4>Branded Merchandise</h4>
+                        <p>Custom apparel & promotional items</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryImage(this)">
+                    <img src="../images/merch/merch_3.jpg" alt="Merchandise">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag">Merchandise</span>
+                        <h4>Corporate Branded Gifts</h4>
+                        <p>Premium promotional products</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryImage(this)">
+                    <img src="../images/merch/merch_1.jpg" alt="Merchandise">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag">Merchandise</span>
+                        <h4>Apparel Branding</h4>
+                        <p>Custom branded clothing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="gallery-lightbox" id="galleryLightbox" onclick="closeGalleryLightbox()">
+        <button class="gallery-lightbox-close" onclick="closeGalleryLightbox()"><i class="fas fa-times"></i></button>
+        <div class="gallery-lightbox-content">
+            <img src="" alt="Gallery Image" id="lightboxImage">
+            <div class="gallery-lightbox-info">
+                <h4 id="lightboxTitle">Project Title</h4>
+                <p id="lightboxDescription">Project description</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back Home Button (Floating) -->
+    <a href="../index.html" class="back-home-float">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+    </a>
+
+    <script>
+        function openGalleryImage(element) {
+            const img = element.querySelector('img');
+            const overlay = element.querySelector('.gallery-item-overlay');
+            const title = overlay.querySelector('h4')?.textContent || 'Project';
+            const description = overlay.querySelector('p')?.textContent || '';
+            
+            const lightbox = document.getElementById('galleryLightbox');
+            const lightboxImg = document.getElementById('lightboxImage');
+            const lightboxTitle = document.getElementById('lightboxTitle');
+            const lightboxDesc = document.getElementById('lightboxDescription');
+            
+            lightboxImg.src = img.src;
+            lightboxTitle.textContent = title;
+            lightboxDesc.textContent = description;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGalleryLightbox() {
+            const lightbox = document.getElementById('galleryLightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeGalleryLightbox();
+            }
+        });
+    </script>
+
+    <style>
+        /* Gallery Page Styles */
+        .back-home-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+        .back-home-btn:hover {
+            color: var(--color-accent);
+            transform: translateX(-4px);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+            background: var(--color-light-gray);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-item-overlay {
+            opacity: 1;
+        }
+
+        .gallery-tag {
+            display: inline-block;
+            background: var(--color-accent);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 3px 12px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            align-self: flex-start;
+        }
+
+        .gallery-item-overlay h4 {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .gallery-item-overlay p {
+            color: rgba(255,255,255,0.7);
+            font-size: 13px;
+        }
+
+        /* Gallery Lightbox */
+        .gallery-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0,0,0,0.92);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            padding: 40px;
+        }
+
+        .gallery-lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .gallery-lightbox-content {
+            max-width: 80vw;
+            max-height: 80vh;
+            position: relative;
+        }
+
+        .gallery-lightbox-content img {
+            max-width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            border-radius: var(--radius-md);
+        }
+
+        .gallery-lightbox-info {
+            color: #fff;
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .gallery-lightbox-info h4 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .gallery-lightbox-info p {
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+
+        .gallery-lightbox-close {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .gallery-lightbox-close:hover {
+            background: var(--color-accent);
+        }
+
+        .back-home-float {
+            position: fixed;
+            bottom: 90px;
+            left: 24px;
+            z-index: 998;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--color-primary);
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .back-home-float:hover {
+            background: var(--color-accent);
+            transform: translateY(-2px);
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 12px;
+            }
+            .gallery-lightbox-content {
+                max-width: 95vw;
+                max-height: 70vh;
+            }
+            .gallery-lightbox-content img {
+                max-height: 50vh;
+            }
+            .back-home-float {
+                bottom: 80px;
+                left: 16px;
+                padding: 8px 14px;
+                font-size: 12px;
+            }
+        }
+    </style>
+
+    <a href="https://wa.me/254722636674" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
