@@ -2604,3 +2604,322 @@ h6 {
         margin-top: 6px;
     }
 }
+
+/* ============================================================
+   HERO SECTION - FULL PAGE WITH PROPER SPACING
+   ============================================================ */
+
+/* Hero Section - Separated from header */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    height: 100vh;
+    max-height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 0;
+    background: var(--color-primary);
+    width: 100%;
+}
+
+.hero-slider {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+            rgba(13, 27, 42, 0.75) 0%,
+            rgba(13, 27, 42, 0.45) 40%,
+            rgba(13, 27, 42, 0.6) 100%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: var(--color-white);
+    max-width: 700px;
+    padding: 40px 24px;
+    margin-top: -40px; /* Pull content up slightly to center better */
+}
+
+.hero-title {
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 900;
+    line-height: 1.08;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.hero-title-highlight {
+    color: var(--color-accent);
+    position: relative;
+    display: inline-block;
+}
+
+.hero-description {
+    font-size: 18px;
+    max-width: 400px;
+    margin: 0 auto 36px;
+    opacity: 0.9;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #E8E6E0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero .btn-primary {
+    padding: 14px 34px;
+    font-size: 15px;
+}
+
+.hero .btn-outline-light {
+    padding: 14px 34px;
+    font-size: 15px;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.25);
+    margin: 10px auto 0;
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scaleY(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleY(1.2);
+    }
+}
+
+/* ============================================================
+   HERO RESPONSIVE - LARGE SCREENS
+   ============================================================ */
+
+/* Large screens - 1200px and above */
+@media (min-width: 1200px) {
+    .hero {
+        min-height: 100vh;
+        height: 100vh;
+        max-height: 1000px;
+    }
+    
+    .hero-content {
+        max-width: 750px;
+        padding: 50px 30px;
+        margin-top: -30px;
+    }
+    
+    .hero-title {
+        font-size: 72px;
+    }
+    
+    .hero-description {
+        font-size: 20px;
+        max-width: 450px;
+    }
+    
+    .hero .btn-primary,
+    .hero .btn-outline-light {
+        padding: 16px 40px;
+        font-size: 16px;
+    }
+    
+    .scroll-indicator {
+        bottom: 48px;
+    }
+}
+
+/* Extra large screens - 1600px and above */
+@media (min-width: 1600px) {
+    .hero {
+        max-height: 1100px;
+    }
+    
+    .hero-title {
+        font-size: 82px;
+    }
+    
+    .hero-content {
+        max-width: 850px;
+    }
+}
+
+/* 1024px - 1199px */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .hero {
+        min-height: 100vh;
+        height: 100vh;
+        max-height: 900px;
+    }
+    
+    .hero-title {
+        font-size: 58px;
+    }
+    
+    .hero-content {
+        max-width: 650px;
+    }
+}
+
+/* 768px - 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero {
+        min-height: 85vh;
+        height: 85vh;
+        max-height: 800px;
+    }
+    
+    .hero-title {
+        font-size: 48px;
+    }
+    
+    .hero-description {
+        font-size: 17px;
+        max-width: 350px;
+    }
+}
+
+/* 480px - 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+    .hero {
+        min-height: 75vh;
+        height: 75vh;
+        max-height: 700px;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .hero-description {
+        font-size: 16px;
+        max-width: 300px;
+    }
+    
+    .hero-content {
+        padding: 30px 20px;
+    }
+    
+    .hero .btn-primary,
+    .hero .btn-outline-light {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+    
+    .scroll-indicator {
+        bottom: 24px;
+    }
+    
+    .scroll-line {
+        height: 28px;
+    }
+}
+
+/* Small screens - below 480px */
+@media (max-width: 479px) {
+    .hero {
+        min-height: 70vh;
+        height: 70vh;
+        max-height: 650px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+    
+    .hero-description {
+        font-size: 14px;
+        max-width: 260px;
+        margin-bottom: 24px;
+    }
+    
+    .hero-content {
+        padding: 20px 16px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 220px;
+        justify-content: center;
+        padding: 11px 20px;
+        font-size: 13px;
+    }
+    
+    .scroll-indicator {
+        bottom: 18px;
+    }
+    
+    .scroll-indicator span {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+    
+    .scroll-line {
+        height: 22px;
+        margin-top: 6px;
+    }
+}
