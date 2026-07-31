@@ -104,66 +104,111 @@
         </div>
     </section>
 
-    <!-- Project Goals -->
+    <!-- Our Expertise Section -->
     <section class="section-padding-lg bg-light">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">What We Deliver</span>
-                <h2 class="section-title">Project <span>Goals</span></h2>
-                <p class="section-description">Every branding strategy project is designed to build a lasting brand.</p>
+                <span class="section-label">Our Expertise</span>
+                <h2 class="section-title">Brand Strategy <span>That Works</span></h2>
+                <p class="section-description">We navigate the complex landscape of brand compliance, licensing, and market entry across East Africa.</p>
             </div>
-            <div class="goals-grid">
-                <div class="goal-card">
-                    <div class="goal-icon"><i class="fas fa-bullseye"></i></div>
-                    <h4>Clear Positioning</h4>
-                    <p>Define your unique value proposition and market position with confidence.</p>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <span class="expertise-number">01</span>
+                    <h4>County & Municipal Licensing</h4>
+                    <p>Full negotiation and acquisition of all county-level branding permits across Kenya.</p>
                 </div>
-                <div class="goal-card">
-                    <div class="goal-icon"><i class="fas fa-users"></i></div>
-                    <h4>Audience Connection</h4>
-                    <p>Build deep, meaningful connections with your target audience through authentic branding.</p>
+                <div class="expertise-card">
+                    <span class="expertise-number">02</span>
+                    <h4>Outdoor Advertising Compliance</h4>
+                    <p>NCCG, KCAA, KENHA, and KURA regulatory approvals for billboards and signage.</p>
                 </div>
-                <div class="goal-card">
-                    <div class="goal-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h4>Brand Consistency</h4>
-                    <p>Ensure consistent brand expression across every customer touchpoint.</p>
+                <div class="expertise-card">
+                    <span class="expertise-number">03</span>
+                    <h4>Cross-Border Brand Compliance</h4>
+                    <p>Ensuring your brand meets regulations in Uganda, Tanzania, Rwanda, and Ethiopia.</p>
+                </div>
+                <div class="expertise-card">
+                    <span class="expertise-number">04</span>
+                    <h4>Site & Location Scouting</h4>
+                    <p>Finding and securing prime high-traffic locations in Nairobi, Mombasa, Kisumu, and across East Africa.</p>
+                </div>
+                <div class="expertise-card">
+                    <span class="expertise-number">05</span>
+                    <h4>Community Entry & Relations</h4>
+                    <p>Working with local authorities and community leaders before brand activation in new areas.</p>
+                </div>
+                <div class="expertise-card">
+                    <span class="expertise-number">06</span>
+                    <h4>Competitor Analysis</h4>
+                    <p>Studying market gaps and positioning your brand for maximum visibility and impact.</p>
+                </div>
+                <div class="expertise-card">
+                    <span class="expertise-number">07</span>
+                    <h4>Vendor Sourcing & Management</h4>
+                    <p>Finding reliable printers, installers, and suppliers in every region.</p>
+                </div>
+                <div class="expertise-card">
+                    <span class="expertise-number">08</span>
+                    <h4>Multi-County Coordination</h4>
+                    <p>Managing simultaneous branding projects across all 47 Kenyan counties.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery -->
-    <section class="section-padding-lg">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Our Work</span>
-                <h2 class="section-title">Branding Strategy <span>Gallery</span></h2>
-                <p class="section-description">Click any image to view in full screen</p>
-            </div>
-            <div class="gallery-grid" id="galleryGrid">
-                <div class="gallery-item" data-src="../../images/office_branding.jpg">
-                    <img src="../../images/office_branding.jpg" alt="Office Branding">
-                </div>
-            </div>
-        </div>
-    </section>
+    <style>
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
 
-    <!-- Lightbox -->
-    <div class="lightbox-overlay" id="lightboxOverlay">
-        <div class="lightbox-container">
-            <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
-            <button class="lightbox-zoom-in" id="lightboxZoomIn"><i class="fas fa-search-plus"></i></button>
-            <button class="lightbox-zoom-out" id="lightboxZoomOut"><i class="fas fa-search-minus"></i></button>
-            <button class="lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
-            <button class="lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
-            <div class="lightbox-image-wrapper">
-                <img id="lightboxImage" src="" alt="Project Image">
-            </div>
-            <div class="lightbox-info">
-                <span id="lightboxCounter">1 / 1</span>
-            </div>
-        </div>
-    </div>
+        .expertise-card {
+            background: var(--color-white);
+            padding: 28px 24px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-accent);
+        }
+
+        .expertise-number {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--color-accent);
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .expertise-card h4 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .expertise-card p {
+            font-size: 14px;
+            color: var(--color-text-light);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .expertise-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+    </style>
 
     <!-- CTA -->
     <section class="cta-section">
@@ -230,6 +275,5 @@
     <a href="https://wa.me/254722636674" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
     <script src="../../js/script.js"></script>
-    <script src="../../js/gallery.js"></script>
 </body>
 </html>
