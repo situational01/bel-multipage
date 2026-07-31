@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Broad Experiential Ltd</title>
-    <meta name="description" content="Insights, tips, and stories from the world of branding and experiential marketing across East Africa.">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon_io/favicon.svg">
+    <link rel="manifest" href="../images/favicon_io/site.webmanifest">
+    
+    <!-- Primary SEO -->
+    <title>Branding Insights & Tips | Blog | Broad Experiential Ltd</title>
+    <meta name="description" content="Insights, tips, and stories from the world of branding and experiential marketing across East Africa. Expert advice on vehicle branding, shop branding, and more.">
+    <meta name="keywords" content="branding tips Kenya, experiential marketing insights, vehicle branding advice, brand strategy blog East Africa, shop branding tips">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Broad Experiential Ltd">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Branding Insights & Tips | Blog | Broad Experiential Ltd">
+    <meta property="og:description" content="Insights, tips, and stories from the world of branding and experiential marketing across East Africa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.broadexperiential.com/pages/blog.html">
+    <meta property="og:image" content="https://www.broadexperiential.com/images/logo.webp">
+    <meta property="og:site_name" content="Broad Experiential Ltd">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Branding Insights & Tips | Blog | Broad Experiential Ltd">
+    <meta name="twitter:description" content="Insights, tips, and stories from the world of branding and experiential marketing.">
+    <meta name="twitter:image" content="https://www.broadexperiential.com/images/logo.webp">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.broadexperiential.com/pages/blog.html">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Broad Experiential Blog",
+        "description": "Insights, tips, and stories from the world of branding and experiential marketing across East Africa.",
+        "url": "https://www.broadexperiential.com/pages/blog.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Broad Experiential Ltd"
+        }
+    }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- CSS & Fonts -->
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -31,7 +85,7 @@
     <!-- Main Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="../index.html" class="nav-logo"><img src="../images/logo.webp" alt="Broad Experiential"></a>
+            <a href="../index.html" class="nav-logo"><img src="../images/logo.webp" alt="Broad Experiential Logo"></a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
@@ -120,6 +174,110 @@
         </div>
     </section>
 
+    <style>
+        .blog-grid-full {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .blog-card-full {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 32px;
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .blog-card-full:hover {
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-accent);
+        }
+
+        .blog-card-image-full {
+            height: 100%;
+            min-height: 280px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .blog-tag-full {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--color-accent);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 16px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog-card-content-full {
+            padding: 28px 32px 32px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .blog-meta-full {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            color: var(--color-text-light);
+            margin-bottom: 12px;
+        }
+
+        .blog-meta-full span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .blog-card-content-full h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .blog-card-content-full p {
+            font-size: 15px;
+            color: var(--color-text-light);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .blog-card-full {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .blog-card-image-full {
+                min-height: 200px;
+            }
+            .blog-card-content-full {
+                padding: 20px 24px 28px;
+            }
+            .blog-meta-full {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-card-content-full h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
+
     <!-- CTA -->
     <section class="cta-section">
         <div class="cta-background" style="background-image: url('../images/car_branding/lorrybranding.jpeg')"></div>
@@ -131,11 +289,12 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="../images/logo.webp" alt="Broad Experiential" class="footer-logo">
+                    <img src="../images/logo.webp" alt="Broad Experiential Logo" class="footer-logo">
                     <p>We build brand experiences that resonate, inspire, and endure.</p>
                     <div class="footer-social">
                         <a href="https://web.facebook.com/profile.php?id=100083548353383" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
