@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Broad Experiential Ltd</title>
+    <meta name="description" content="Comprehensive experiential marketing services including vehicle branding, shop branding, signage, printing, and brand activations.">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar" id="topBar">
+        <div class="container top-bar-container">
+            <div class="top-bar-contact">
+                <a href="tel:+254722636674" class="top-bar-link">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+254 722 636 674</span>
+                </a>
+                <span class="top-bar-divider"></span>
+                <a href="mailto:sales@broadexperiential.com" class="top-bar-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>sales@broadexperiential.com</span>
+                </a>
+                <span class="top-bar-divider"></span>
+                <span class="top-bar-hours">
+                    <i class="fas fa-clock"></i>
+                    <span>Mon - Fri: 8:00 AM - 5:00 PM</span>
+                </span>
+            </div>
+            <div class="top-bar-social">
+                <a href="https://web.facebook.com/profile.php?id=100083548353383" target="_blank" rel="noopener" aria-label="Facebook" class="top-bar-social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/broadexp?s=20" target="_blank" rel="noopener" aria-label="Twitter" class="top-bar-social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/broad_experiential_ltd" target="_blank" rel="noopener" aria-label="Instagram" class="top-bar-social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/muhindi-vugutza-59523221b/" target="_blank" rel="noopener" aria-label="LinkedIn" class="top-bar-social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Main Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo"><img src="../images/logo.webp" alt="Broad Experiential"></a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Get Quote</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero with background image -->
+    <section class="page-hero page-hero-image" style="background-image: url('../images/print/print1.webp');">
+        <div class="page-hero-overlay"></div>
+        <div class="container page-hero-content-wrapper">
+            <span class="page-hero-label">What We Do</span>
+            <h1 class="page-hero-title">Our Services</h1>
+            <p class="page-hero-description">Comprehensive branding solutions tailored to your needs</p>
+        </div>
+    </section>
+
+    <section class="section-padding-lg">
+        <div class="container">
+            <div class="services-list">
+                <!-- Service Card 1 -->
+                <div class="service-detail-card fade-in-up" data-service="vehicle-branding" onclick="openServiceModal('vehicle-branding')">
+                    <div class="service-detail-image" style="background-image: url('../images/car_branding/carbranding3.jpg')"></div>
+                    <div class="service-detail-body">
+                        <h3>Vehicle Branding</h3>
+                        <p>Transform your fleet into powerful mobile billboards with professional vehicle wraps, decals, and full-body branding that commands attention on every road.</p>
+                        <div class="tag-list">
+                            <li>Full Fleet Branding</li>
+                            <li>Partial Wraps</li>
+                            <li>Magnetic Signage</li>
+                            <li>3M Premium Vinyl</li>
+                        </div>
+                        <button class="btn btn-outline btn-sm" style="margin-top: 14px;">View Gallery <i class="fas fa-images"></i></button>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-detail-card fade-in-up" data-service="shop-branding" onclick="openServiceModal('shop-branding')">
+                    <div class="service-detail-image" style="background-image: url('../images/shop_branding/sunking_shopbranding.jfif')"></div>
+                    <div class="service-detail-body">
+                        <h3>Shop & Retail Branding</h3>
+                        <p>Create immersive retail environments that enhance customer experience and strengthen brand recall with complete shop makeovers.</p>
+                        <div class="tag-list">
+                            <li>Storefront Branding</li>
+                            <li>Interior Graphics</li>
+                            <li>Window Displays</li>
+                            <li>Retail Fixtures</li>
+                        </div>
+                        <button class="btn btn-outline btn-sm" style="margin-top: 14px;">View Gallery <i class="fas fa-images"></i></button>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-detail-card fade-in-up" data-service="wall-branding" onclick="openServiceModal('wall-branding')">
+                    <div class="service-detail-image" style="background-image: url('../images/wall_branding/vihiga_wallbranding1.jfif')"></div>
+                    <div class="service-detail-body">
+                        <h3>Wall & Outdoor Branding</h3>
+                        <p>Large-scale wall murals and outdoor branding that transform ordinary spaces into powerful brand statements visible to thousands daily.</p>
+                        <div class="tag-list">
+                            <li>Building Murals</li>
+                            <li>Wall Wraps</li>
+                            <li>Perimeter Branding</li>
+                            <li>Weather-Resistant</li>
+                        </div>
+                        <button class="btn btn-outline btn-sm" style="margin-top: 14px;">View Gallery <i class="fas fa-images"></i></button>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-detail-card fade-in-up" data-service="printing" onclick="openServiceModal('printing')">
+                    <div class="service-detail-image" style="background-image: url('../images/print/print1.webp')"></div>
+                    <div class="service-detail-body">
+                        <h3>Printing & Design</h3>
+                        <p>High-quality digital, screen, and offset printing services for all your marketing collateral, from business cards to large-format banners.</p>
+                        <div class="tag-list">
+                            <li>Digital Printing</li>
+                            <li>Screen/Offset</li>
+                            <li>Large Format</li>
+                            <li>Graphic Design</li>
+                        </div>
+                        <button class="btn btn-outline btn-sm" style="margin-top: 14px;">View Gallery <i class="fas fa-images"></i></button>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="service-detail-card fade-in-up" data-service="merchandise" onclick="openServiceModal('merchandise')">
+                    <div class="service-detail-image" style="background-image: url('../images/merch/merch_4.jpg')"></div>
+                    <div class="service-detail-body">
+                        <h3>Merchandise Branding</h3>
+                        <p>Custom-branded merchandise including t-shirts, caps, mugs, and promotional items that keep your brand top-of-mind.</p>
+                        <div class="tag-list">
+                            <li>Apparel Branding</li>
+                            <li>Promotional Items</li>
+                            <li>Corporate Gifts</li>
+                            <li>Heat Press & Embroidery</li>
+                        </div>
+                        <button class="btn btn-outline btn-sm" style="margin-top: 14px;">View Gallery <i class="fas fa-images"></i></button>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="service-detail-card fade-in-up" data-service="experiential" onclick="openServiceModal('experiential')">
+                    <div class="service-detail-image" style="background-image: url('../images/experiential_promotions/captain_morgan.jpg')"></div>
+                    <div class="service-detail-body">
+                        <h3>Experiential Activations</h3>
+                        <p>Immersive brand experiences and event activations that create memorable connections with your target audience across East Africa.</p>
+                        <div class="tag-list">
+                            <li>Product Launches</li>
+                            <li>Trade Shows</li>
+                            <li>Road Shows</li>
+                            <li>Sampling Campaigns</li>
+                        </div>
+                        <button class="btn btn-outline btn-sm" style="margin-top: 14px;">View Gallery <i class="fas fa-images"></i></button>
+                    </div>
+                </div>
+
+                <!-- Service Card 7 -->
+                <div class="service-detail-card fade-in-up" data-service="office-branding" onclick="openServiceModal('office-branding')">
+                    <div class="service-detail-image" style="background-image: url('../images/office_branding.jpg')"></div>
+                    <div class="service-detail-body">
+                        <h3>Office Branding</h3>
+                        <p>Professional office environments that reflect your corporate culture, impress clients, and inspire your team every day.</p>
+                        <div class="tag-list">
+                            <li>Reception Branding</li>
+                            <li>Wayfinding Signage</li>
+                            <li>Wall Graphics</li>
+                            <li>Glass Manifestation</li>
+                        </div>
+                        <button class="btn btn-outline btn-sm" style="margin-top: 14px;">View Gallery <i class="fas fa-images"></i></button>
+                    </div>
+                </div>
+
+                <!-- Service Card 8 -->
+                <div class="service-detail-card fade-in-up" data-service="signages" onclick="openServiceModal('signages')">
+                    <div class="service-detail-image" style="background-image: url('https://images.unsplash.com/photo-1553531384-cc0ac1ae1f0d?w=600&q=80')"></div>
+                    <div class="service-detail-body">
+                        <h3>Signage Solutions</h3>
+                        <p>High-impact indoor and outdoor signage including illuminated signs, directional signs, and wayfinding systems that guide and inform.</p>
+                        <div class="tag-list">
+                            <li>Illuminated Signs</li>
+                            <li>Directional Signage</li>
+                            <li>Safety Signage</li>
+                            <li>Custom Fabrication</li>
+                        </div>
+                        <button class="btn btn-outline btn-sm" style="margin-top: 14px;">View Gallery <i class="fas fa-images"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Detail Modal -->
+    <div class="service-modal" id="serviceModal">
+        <div class="service-modal-backdrop" onclick="closeServiceModal()"></div>
+        <div class="service-modal-container">
+            <button class="service-modal-close" onclick="closeServiceModal()"><i class="fas fa-times"></i></button>
+            <div class="service-modal-content" id="serviceModalContent"></div>
+        </div>
+    </div>
+
+    <!-- Process Section -->
+    <section class="section-padding-lg bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Process</span>
+                <h2 class="section-title">How We Work</h2>
+                <p class="section-description">A streamlined approach that delivers results</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step fade-in-up">
+                    <div class="process-number">1</div>
+                    <h4>Consultation</h4>
+                    <p>We discuss your goals, budget, and timeline to understand your vision.</p>
+                </div>
+                <div class="process-step fade-in-up">
+                    <div class="process-number">2</div>
+                    <h4>Design & Strategy</h4>
+                    <p>Our creative team develops concepts aligned with your brand identity.</p>
+                </div>
+                <div class="process-step fade-in-up">
+                    <div class="process-number">3</div>
+                    <h4>Production</h4>
+                    <p>Premium materials and expert craftsmanship bring designs to life.</p>
+                </div>
+                <div class="process-step fade-in-up">
+                    <div class="process-number">4</div>
+                    <h4>Installation</h4>
+                    <p>Professional installation teams ensure flawless execution on site.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-padding-lg">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <button class="faq-question">What areas do you cover?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>We operate across all 47 counties in Kenya and have partner networks in Uganda, Tanzania, Rwanda, and Ethiopia.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How long does a typical project take?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Vehicle branding: 3-7 days. Shop branding: 1-2 weeks. Large campaigns: 2-4 weeks. Express services available.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do you handle county permits?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Yes, we manage all county-level negotiations, permits, and compliance requirements.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What warranty do you offer?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>All branding installations come with a 6-month warranty against material defects and workmanship issues.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-background" style="background-image: url('../images/car_branding/lorrybranding.jpeg')"></div>
+        <div class="cta-overlay"></div>
+        <div class="cta-content">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's create something exceptional together.</p>
+            <a href="contact.html" class="btn btn-primary btn-lg">Get Your Quote</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><img src="../images/logo.webp" alt="Broad Experiential" class="footer-logo"><p>Plan. Execute. Excel. Your experiential marketing partner across East Africa.</p><div class="footer-social"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div></div>
+                <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+                <div class="footer-links"><h4>Services</h4><ul><li><a href="services.html">Vehicle Branding</a></li><li><a href="services.html">Shop Branding</a></li><li><a href="services.html">Signages</a></li><li><a href="services.html">Printing</a></li><li><a href="services.html">Experiential</a></li></ul></div>
+                <div class="footer-contact"><h4>Contact Us</h4><ul><li><i class="fas fa-map-marker-alt"></i> Epren Centre, Mumias South Rd, 2nd Floor, Suite 4, Nairobi</li><li><i class="fas fa-phone"></i> <a href="tel:+254722636674">+254 722 636 674</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:sales@broadexperiential.com">sales@broadexperiential.com</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 <strong>Broad Experiential Ltd</strong>. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/254722636674" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
