@@ -160,7 +160,7 @@
         </div>
     </section>
 
-    <!-- Video Section with Full Controls - 2 Videos -->
+    <!-- Video Section with Visible Controls -->
     <section class="video-section section-padding-lg bg-light">
         <div class="container">
             <div class="section-header">
@@ -172,72 +172,45 @@
                 <!-- Video 1 -->
                 <div class="video-card">
                     <div class="video-wrapper">
-                        <video id="video1" class="video-player" poster="../videos/thumbnails/octobafest.png" preload="metadata" controls>
+                        <video id="video1" class="video-player" poster="../videos/tusker-exp.mp4" preload="metadata">
                             <source src="../videos/tusker-exp.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <div class="video-overlay-play">
-                            <button class="video-play-btn" onclick="toggleVideo('video1')"><i class="fas fa-play"></i></button>
-                        </div>
-                        <div class="video-controls">
+                        <div class="video-controls visible">
                             <button class="video-control-btn" onclick="toggleVideo('video1')"><i class="fas fa-play"></i></button>
                             <input type="range" class="video-progress" id="progress1" value="0" min="0" max="100" step="0.1">
                             <span class="video-time" id="time1">0:00 / 0:00</span>
                             <button class="video-control-btn" onclick="toggleMute('video1')"><i class="fas fa-volume-up"></i></button>
-                            <button class="video-control-btn" onclick="togglePiP('video1')"><i class="fas fa-picture-in-picture"></i></button>
                             <button class="video-control-btn" onclick="toggleFullscreen('video1')"><i class="fas fa-expand"></i></button>
-                            <select class="video-speed" onchange="changeSpeed('video1', this.value)">
-                                <option value="0.5">0.5x</option>
-                                <option value="0.75">0.75x</option>
-                                <option value="1" selected>1x</option>
-                                <option value="1.25">1.25x</option>
-                                <option value="1.5">1.5x</option>
-                                <option value="2">2x</option>
-                            </select>
-                            <button class="video-control-btn" onclick="downloadVideo('video1')"><i class="fas fa-download"></i></button>
                         </div>
                     </div>
                     <div class="video-info">
-                        <h4>Tusker Octobafest</h4>
-                        <p>Brand Activation Event</p>
+                        <h4>Tusker OctobaFest</h4>
+                        <p>OctobaFest</p>
                     </div>
                 </div>
 
                 <!-- Video 2 -->
                 <div class="video-card">
                     <div class="video-wrapper">
-                        <video id="video2" class="video-player" poster="../videos/thumbnails/county.png" preload="metadata" controls>
+                        <video id="video2" class="video-player" poster="../videos/thumbnails/county.png" preload="metadata">
                             <source src="../videos/kwal.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <div class="video-overlay-play">
-                            <button class="video-play-btn" onclick="toggleVideo('video2')"><i class="fas fa-play"></i></button>
-                        </div>
-                        <div class="video-controls">
+                        <div class="video-controls visible">
                             <button class="video-control-btn" onclick="toggleVideo('video2')"><i class="fas fa-play"></i></button>
                             <input type="range" class="video-progress" id="progress2" value="0" min="0" max="100" step="0.1">
                             <span class="video-time" id="time2">0:00 / 0:00</span>
                             <button class="video-control-btn" onclick="toggleMute('video2')"><i class="fas fa-volume-up"></i></button>
-                            <button class="video-control-btn" onclick="togglePiP('video2')"><i class="fas fa-picture-in-picture"></i></button>
                             <button class="video-control-btn" onclick="toggleFullscreen('video2')"><i class="fas fa-expand"></i></button>
-                            <select class="video-speed" onchange="changeSpeed('video2', this.value)">
-                                <option value="0.5">0.5x</option>
-                                <option value="0.75">0.75x</option>
-                                <option value="1" selected>1x</option>
-                                <option value="1.25">1.25x</option>
-                                <option value="1.5">1.5x</option>
-                                <option value="2">2x</option>
-                            </select>
-                            <button class="video-control-btn" onclick="downloadVideo('video2')"><i class="fas fa-download"></i></button>
                         </div>
                     </div>
                     <div class="video-info">
-                        <h4>Form Imejipa na County</h4>
-                        <p>County Activation</p>
+                        <h4>County Activation</h4>
+                        <p>Form imejipa na County</p>
                     </div>
                 </div>
             </div>
-           
         </div>
     </section>
 
@@ -327,7 +300,7 @@
             gap: 14px;
         }
 
-        /* Video Section - 2 Videos */
+        /* Video Section - 2 Videos with Visible Controls */
         .video-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -361,7 +334,7 @@
             display: block;
         }
 
-        /* Hide default controls, we use custom ones */
+        /* Hide default controls */
         .video-player::-webkit-media-controls {
             display: none !important;
         }
@@ -369,133 +342,88 @@
             display: none !important;
         }
 
-        .video-overlay-play {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0, 0, 0, 0.3);
-            opacity: 0;
-            transition: var(--transition);
-            cursor: pointer;
-            pointer-events: none;
-        }
-
-        .video-wrapper:hover .video-overlay-play {
-            opacity: 1;
-        }
-
-        .video-overlay-play .video-play-btn {
-            width: 64px;
-            height: 64px;
-            background: var(--color-accent);
-            border: none;
-            border-radius: 50%;
-            color: #fff;
-            font-size: 24px;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(7, 209, 252, 0.4);
-            pointer-events: auto;
-        }
-
-        .video-overlay-play .video-play-btn:hover {
-            transform: scale(1.1);
-        }
-
+        /* Video Controls - Always Visible */
         .video-controls {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
-            padding: 12px 16px 10px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+            padding: 14px 16px 12px;
             display: flex;
             align-items: center;
-            gap: 8px;
-            opacity: 0;
-            transition: var(--transition);
+            gap: 10px;
+            z-index: 10;
         }
 
-        .video-wrapper:hover .video-controls,
-        .video-wrapper.controls-visible .video-controls {
-            opacity: 1;
+        .video-controls.visible {
+            opacity: 1 !important;
         }
 
         .video-control-btn {
             background: none;
             border: none;
             color: #fff;
-            font-size: 14px;
+            font-size: 16px;
             cursor: pointer;
-            padding: 4px 6px;
+            padding: 4px 8px;
             transition: var(--transition);
             display: flex;
             align-items: center;
             justify-content: center;
+            border-radius: 4px;
+            min-width: 32px;
+            min-height: 32px;
         }
 
         .video-control-btn:hover {
             color: var(--color-accent);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .video-progress {
             flex: 1;
-            height: 4px;
+            height: 5px;
             -webkit-appearance: none;
             appearance: none;
             background: rgba(255, 255, 255, 0.3);
-            border-radius: 2px;
+            border-radius: 3px;
             outline: none;
             cursor: pointer;
             transition: var(--transition);
+            min-width: 60px;
         }
 
         .video-progress::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 12px;
-            height: 12px;
+            width: 14px;
+            height: 14px;
             border-radius: 50%;
             background: var(--color-accent);
             cursor: pointer;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .video-progress::-moz-range-thumb {
-            width: 12px;
-            height: 12px;
+            width: 14px;
+            height: 14px;
             border-radius: 50%;
             background: var(--color-accent);
             cursor: pointer;
-            border: none;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .video-time {
             color: #fff;
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 500;
-            min-width: 80px;
+            min-width: 90px;
             text-align: center;
-        }
-
-        .video-speed {
-            background: rgba(255, 255, 255, 0.15);
-            border: none;
-            color: #fff;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 12px;
-            cursor: pointer;
-            font-family: var(--font-primary);
-        }
-
-        .video-speed option {
-            background: var(--color-primary);
-            color: #fff;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 0.3px;
         }
 
         .video-info {
@@ -524,6 +452,65 @@
             margin-right: 6px;
         }
 
+        /* Fullscreen styles */
+        .video-wrapper:fullscreen {
+            width: 100vw;
+            height: 100vh;
+            aspect-ratio: auto;
+        }
+
+        .video-wrapper:fullscreen .video-player {
+            height: 100vh;
+            object-fit: contain;
+        }
+
+        .video-wrapper:fullscreen .video-controls {
+            padding: 20px 24px 16px;
+        }
+
+        .video-wrapper:fullscreen .video-control-btn {
+            font-size: 20px;
+            padding: 6px 12px;
+            min-width: 40px;
+            min-height: 40px;
+        }
+
+        .video-wrapper:fullscreen .video-progress {
+            height: 6px;
+        }
+
+        .video-wrapper:fullscreen .video-time {
+            font-size: 15px;
+            min-width: 100px;
+        }
+
+        /* Exit fullscreen button */
+        .fullscreen-exit-btn {
+            display: none;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: var(--transition);
+            z-index: 20;
+        }
+
+        .fullscreen-exit-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .video-wrapper:fullscreen .fullscreen-exit-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
         @media (max-width: 1024px) {
             .video-grid {
                 grid-template-columns: 1fr 1fr;
@@ -548,21 +535,22 @@
                 margin: 0 auto;
             }
             .video-controls {
+                padding: 10px 12px 8px;
+                gap: 6px;
                 flex-wrap: wrap;
-                gap: 4px;
-                padding: 8px 12px;
             }
             .video-control-btn {
-                font-size: 12px;
-                padding: 2px 4px;
+                font-size: 14px;
+                padding: 3px 6px;
+                min-width: 28px;
+                min-height: 28px;
             }
             .video-time {
-                font-size: 10px;
-                min-width: 60px;
+                font-size: 11px;
+                min-width: 70px;
             }
-            .video-speed {
-                font-size: 10px;
-                padding: 1px 4px;
+            .video-progress {
+                min-width: 40px;
             }
         }
 
@@ -579,24 +567,32 @@
             .video-wrapper {
                 aspect-ratio: 16/9;
             }
-            .video-overlay-play .video-play-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 18px;
-            }
             .video-controls {
-                padding: 6px 8px;
+                padding: 8px 10px 6px;
                 gap: 4px;
+            }
+            .video-control-btn {
+                font-size: 12px;
+                padding: 2px 4px;
+                min-width: 24px;
+                min-height: 24px;
+            }
+            .video-time {
+                font-size: 10px;
+                min-width: 60px;
+            }
+            .video-progress {
+                min-width: 30px;
             }
         }
     </style>
 
     <script>
         // ============================================================
-        // VIDEO CONTROLS - Full Functionality
+        // VIDEO CONTROLS - Simple & Reliable
         // ============================================================
 
-        const videoStates = {};
+        var videoStates = {};
 
         function getVideo(id) {
             return document.getElementById(id);
@@ -610,15 +606,12 @@
         }
 
         function toggleVideo(id) {
-            const video = getVideo(id);
-            const state = getState(id);
-            
+            var video = getVideo(id);
             if (!video) return;
+            var state = getState(id);
             
             if (video.paused) {
-                video.play().catch(function(e) {
-                    console.log('Play prevented:', e);
-                });
+                video.play().catch(function(e) {});
                 state.playing = true;
                 updatePlayButton(id, true);
             } else {
@@ -629,55 +622,51 @@
         }
 
         function updatePlayButton(id, isPlaying) {
-            const video = getVideo(id);
+            var video = getVideo(id);
             if (!video) return;
-            const wrapper = video.closest('.video-wrapper');
+            var wrapper = video.closest('.video-wrapper');
             if (!wrapper) return;
             
-            const overlayBtn = wrapper.querySelector('.video-overlay-play .video-play-btn');
-            const controlBtn = wrapper.querySelector('.video-controls .video-control-btn:first-child');
-            
-            const icon = isPlaying ? 'fa-pause' : 'fa-play';
-            if (overlayBtn) overlayBtn.innerHTML = '<i class="fas ' + icon + '"></i>';
-            if (controlBtn) controlBtn.innerHTML = '<i class="fas ' + icon + '"></i>';
+            var btn = wrapper.querySelector('.video-controls .video-control-btn:first-child');
+            if (btn) {
+                btn.innerHTML = isPlaying ? '<i class="fas fa-pause"></i>' : '<i class="fas fa-play"></i>';
+            }
         }
 
         function toggleMute(id) {
-            const video = getVideo(id);
+            var video = getVideo(id);
             if (!video) return;
-            const state = getState(id);
+            var state = getState(id);
             
             video.muted = !video.muted;
             state.muted = video.muted;
             
-            const wrapper = video.closest('.video-wrapper');
+            var wrapper = video.closest('.video-wrapper');
             if (!wrapper) return;
-            const btn = wrapper.querySelector('.video-controls .video-control-btn:nth-child(4)');
+            var btn = wrapper.querySelector('.video-controls .video-control-btn:nth-child(4)');
             if (btn) {
                 btn.innerHTML = video.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
             }
         }
 
-        function togglePiP(id) {
-            const video = getVideo(id);
-            if (!video) return;
-            if (document.pictureInPictureElement) {
-                document.exitPictureInPicture().catch(function(e) {});
-            } else if (document.pictureInPictureEnabled) {
-                video.requestPictureInPicture().catch(function(e) {});
-            }
-        }
-
         function toggleFullscreen(id) {
-            const video = getVideo(id);
+            var video = getVideo(id);
             if (!video) return;
+            var wrapper = video.closest('.video-wrapper');
+            if (!wrapper) return;
+            
             if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
-                if (video.requestFullscreen) {
-                    video.requestFullscreen().catch(function(e) {});
-                } else if (video.webkitRequestFullscreen) {
-                    video.webkitRequestFullscreen();
-                } else if (video.msRequestFullscreen) {
-                    video.msRequestFullscreen();
+                if (wrapper.requestFullscreen) {
+                    wrapper.requestFullscreen().catch(function(e) {});
+                } else if (wrapper.webkitRequestFullscreen) {
+                    wrapper.webkitRequestFullscreen();
+                } else if (wrapper.msRequestFullscreen) {
+                    wrapper.msRequestFullscreen();
+                }
+                // Update button
+                var btn = wrapper.querySelector('.video-controls .video-control-btn:last-child');
+                if (btn) {
+                    btn.innerHTML = '<i class="fas fa-compress"></i>';
                 }
             } else {
                 if (document.exitFullscreen) {
@@ -687,75 +676,54 @@
                 } else if (document.msExitFullscreen) {
                     document.msExitFullscreen();
                 }
+                // Update button
+                var btn = wrapper.querySelector('.video-controls .video-control-btn:last-child');
+                if (btn) {
+                    btn.innerHTML = '<i class="fas fa-expand"></i>';
+                }
             }
         }
 
-        function changeSpeed(id, speed) {
-            const video = getVideo(id);
-            if (!video) return;
-            video.playbackRate = parseFloat(speed);
-        }
-
-        function downloadVideo(id) {
-            const video = getVideo(id);
-            if (!video) return;
-            const source = video.querySelector('source');
-            if (source && source.src && source.src !== '#') {
-                const link = document.createElement('a');
-                link.href = source.src;
-                link.download = source.src.split('/').pop() || 'video.mp4';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            } else {
-                alert('Video source not available for download. Please add a valid video file.');
-            }
-        }
-
-        // Initialize video controls for all videos
+        // Initialize video controls
         document.querySelectorAll('.video-player').forEach(function(video) {
-            const id = video.id;
-            const progress = document.getElementById('progress' + id.replace('video', ''));
-            const timeDisplay = document.getElementById('time' + id.replace('video', ''));
+            var id = video.id;
+            var progress = document.getElementById('progress' + id.replace('video', ''));
+            var timeDisplay = document.getElementById('time' + id.replace('video', ''));
             
             if (progress && timeDisplay) {
-                // Update progress and time
                 video.addEventListener('timeupdate', function() {
                     if (this.duration) {
-                        const percent = (this.currentTime / this.duration) * 100;
+                        var percent = (this.currentTime / this.duration) * 100;
                         progress.value = percent || 0;
                         
-                        const current = formatTime(this.currentTime);
-                        const total = formatTime(this.duration);
+                        var current = formatTime(this.currentTime);
+                        var total = formatTime(this.duration);
                         timeDisplay.textContent = current + ' / ' + total;
                     }
                 });
                 
-                // Seek on progress bar click/drag
                 progress.addEventListener('input', function() {
                     if (video.duration) {
-                        const time = (this.value / 100) * video.duration;
+                        var time = (this.value / 100) * video.duration;
                         video.currentTime = time;
                     }
                 });
             }
             
-            // Update play button when video ends
             video.addEventListener('ended', function() {
-                const state = getState(id);
+                var state = getState(id);
                 state.playing = false;
                 updatePlayButton(id, false);
             });
             
-            // Update play button when video plays/pauses
             video.addEventListener('play', function() {
-                const state = getState(id);
+                var state = getState(id);
                 state.playing = true;
                 updatePlayButton(id, true);
             });
             
             video.addEventListener('pause', function() {
-                const state = getState(id);
+                var state = getState(id);
                 state.playing = false;
                 updatePlayButton(id, false);
             });
@@ -763,31 +731,31 @@
 
         function formatTime(seconds) {
             if (isNaN(seconds) || !isFinite(seconds) || seconds === Infinity) return '0:00';
-            const mins = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60);
+            var mins = Math.floor(seconds / 60);
+            var secs = Math.floor(seconds % 60);
             return mins + ':' + (secs < 10 ? '0' : '') + secs;
         }
 
-        // Update fullscreen button icons
+        // Fullscreen change events - update button icons
         document.addEventListener('fullscreenchange', updateFullscreenIcons);
         document.addEventListener('webkitfullscreenchange', updateFullscreenIcons);
         document.addEventListener('msfullscreenchange', updateFullscreenIcons);
 
         function updateFullscreenIcons() {
-            const isFullscreen = !!(document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement);
-            document.querySelectorAll('.video-control-btn .fa-expand, .video-control-btn .fa-compress').forEach(function(icon) {
-                const btn = icon.closest('.video-control-btn');
+            var isFullscreen = !!(document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement);
+            document.querySelectorAll('.video-wrapper').forEach(function(wrapper) {
+                var btn = wrapper.querySelector('.video-controls .video-control-btn:last-child');
                 if (btn) {
                     btn.innerHTML = isFullscreen ? '<i class="fas fa-compress"></i>' : '<i class="fas fa-expand"></i>';
                 }
             });
         }
 
-        // Click on video wrapper to toggle play (but not on controls or overlay button)
+        // Click on video to toggle play
         document.querySelectorAll('.video-wrapper').forEach(function(wrapper) {
             wrapper.addEventListener('click', function(e) {
-                if (e.target.closest('.video-controls') || e.target.closest('.video-overlay-play')) return;
-                const video = this.querySelector('.video-player');
+                if (e.target.closest('.video-controls')) return;
+                var video = this.querySelector('.video-player');
                 if (video) toggleVideo(video.id);
             });
         });
