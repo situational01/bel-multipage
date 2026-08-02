@@ -3478,3 +3478,20 @@ button:active {
         font-size: 11px;
     }
 }
+
+/* Increase hero height on large screens */
+@media (min-width: 1100px) {
+    .hero {
+        min-height: 105vh;
+        height: 105vh;
+        max-height: 1100px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .hero {
+        min-height: 115vh;
+        height: 115vh;
+        max-height: 1200px;
+    }
+}
