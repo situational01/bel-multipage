@@ -1,0 +1,15 @@
+# robots.txt for Broad Experiential Ltd
+# https://www.broadexperiential.com/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /images/favicon_io/
+Disallow: /videos/thumbnails/
+Disallow: /css/
+Disallow: /js/
+
+# Sitemap location
+Sitemap: https://www.broadexperiential.com/sitemap.xml
+
+# Crawl delay for slower servers
+Crawl-delay: 2s
