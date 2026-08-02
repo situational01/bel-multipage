@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
 });
 
-// Preloader
+// ============================================================
+// PRELOADER
+// ============================================================
 function initPreloader() {
     var p = document.getElementById('preloader');
     if (!p) return;
@@ -36,7 +38,9 @@ function initPreloader() {
     }, 2500);
 }
 
-// Navigation
+// ============================================================
+// NAVIGATION
+// ============================================================
 function initNavigation() {
     var n = document.getElementById('navbar'),
         t = document.getElementById('topBar'),
@@ -142,39 +146,107 @@ function initNavigation() {
     });
 }
 
-// Hero Slider
+// ============================================================
+// HERO SLIDER - INFINITE LOOP (3 second interval, 0.8s transition)
+// ============================================================
 function initHeroSlider() {
-    var s = document.querySelectorAll('.hero-slide');
-    if (s.length < 2) return;
-    var c = 0,
-        iv;
+    var slides = document.querySelectorAll('.hero-slide');
+    if (slides.length < 2) return;
 
-    function sh(i) {
-        s.forEach(function(sl) {
-            sl.classList.remove('active');
+    var currentIndex = 0;
+    var intervalId = null;
+    var isPaused = false;
+
+    // Function to show a specific slide
+    function showSlide(index) {
+        // Remove active class from all slides
+        slides.forEach(function(slide) {
+            slide.classList.remove('active');
         });
-        s[i].classList.add('active');
+        // Add active class to current slide
+        slides[index].classList.add('active');
     }
 
-    function nx() {
-        c = (c + 1) % s.length;
-        sh(c);
+    // Function to go to the next slide (infinite loop)
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
     }
-    sh(0);
-    iv = setInterval(nx, 5000);
 
-    var h = document.querySelector('.hero');
-    if (h) {
-        h.addEventListener('mouseenter', function() {
-            clearInterval(iv);
+    // Function to go to the previous slide (infinite loop)
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+    }
+
+    // Start the autoplay
+    function startAutoplay() {
+        if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+        }
+        intervalId = setInterval(nextSlide, 3000); // Change every 3 seconds
+        isPaused = false;
+    }
+
+    // Stop the autoplay
+    function stopAutoplay() {
+        if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+            isPaused = true;
+        }
+    }
+
+    // Initialize with first slide
+    showSlide(0);
+
+    // Start autoplay
+    startAutoplay();
+
+    // Pause on hover
+    var hero = document.querySelector('.hero');
+    if (hero) {
+        hero.addEventListener('mouseenter', function() {
+            stopAutoplay();
         });
-        h.addEventListener('mouseleave', function() {
-            iv = setInterval(nx, 5000);
+        hero.addEventListener('mouseleave', function() {
+            if (isPaused) {
+                startAutoplay();
+            }
         });
     }
+
+    // Optional: Pause on touch devices
+    hero.addEventListener('touchstart', function() {
+        stopAutoplay();
+    });
+    hero.addEventListener('touchend', function() {
+        if (isPaused) {
+            setTimeout(function() {
+                startAutoplay();
+            }, 3000); // Restart after 3 seconds of inactivity
+        }
+    });
+
+    // Expose functions globally for manual control (optional)
+    window.heroSlider = {
+        next: nextSlide,
+        prev: prevSlide,
+        goTo: function(index) {
+            if (index >= 0 && index < slides.length) {
+                currentIndex = index;
+                showSlide(currentIndex);
+            }
+        },
+        play: startAutoplay,
+        pause: stopAutoplay
+    };
 }
 
-// Scroll Reveal
+// ============================================================
+// SCROLL REVEAL
+// ============================================================
 function initScrollReveal() {
     var els = document.querySelectorAll('.fade-in-up, .service-card-home, .testimonial-card-home, .blog-card, .goal-card');
     if (!els.length) return;
@@ -196,7 +268,9 @@ function initScrollReveal() {
     });
 }
 
-// Clients Carousel
+// ============================================================
+// CLIENTS CAROUSEL
+// ============================================================
 function initClientsCarousel() {
     var t = document.getElementById('clientsTrack');
     if (!t) return;
@@ -235,7 +309,9 @@ function initClientsCarousel() {
     });
 }
 
-// Contact Form
+// ============================================================
+// CONTACT FORM
+// ============================================================
 function initContactForm() {
     var f = document.getElementById('contactForm');
     if (!f) return;
@@ -271,7 +347,9 @@ function initContactForm() {
     });
 }
 
-// Notification
+// ============================================================
+// NOTIFICATION
+// ============================================================
 function showNotification(msg, type) {
     var existing = document.querySelector('.notification');
     if (existing) {
@@ -296,7 +374,9 @@ function showNotification(msg, type) {
     }, 4000);
 }
 
-// Smooth Scroll
+// ============================================================
+// SMOOTH SCROLL
+// ============================================================
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(function(a) {
         a.addEventListener('click', function(e) {
@@ -313,3 +393,27 @@ function initSmoothScroll() {
         });
     });
 }
+
+// ============================================================
+// KEYBOARD CONTROLS FOR HERO SLIDER (Optional)
+// ============================================================
+document.addEventListener('keydown', function(e) {
+    // Only if hero slider exists
+    if (typeof window.heroSlider !== 'undefined') {
+        if (e.key === 'ArrowRight') {
+            window.heroSlider.next();
+            // Reset autoplay timer
+            window.heroSlider.pause();
+            setTimeout(function() {
+                window.heroSlider.play();
+            }, 5000);
+        }
+        if (e.key === 'ArrowLeft') {
+            window.heroSlider.prev();
+            window.heroSlider.pause();
+            setTimeout(function() {
+                window.heroSlider.play();
+            }, 5000);
+        }
+    }
+});

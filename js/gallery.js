@@ -4,27 +4,27 @@
 
 (function() {
     // Initialize only if gallery exists
-    const items = document.querySelectorAll('.gallery-item');
+    var items = document.querySelectorAll('.gallery-item');
     if (!items.length) return;
 
-    const overlay = document.getElementById('lightboxOverlay');
+    var overlay = document.getElementById('lightboxOverlay');
     if (!overlay) return;
 
-    const lightboxImg = document.getElementById('lightboxImage');
-    const counter = document.getElementById('lightboxCounter');
-    let currentIndex = 0;
-    let images = [];
-    let zoomLevel = 1;
+    var lightboxImg = document.getElementById('lightboxImage');
+    var counter = document.getElementById('lightboxCounter');
+    var currentIndex = 0;
+    var images = [];
+    var zoomLevel = 1;
 
     // Collect image sources
-    items.forEach(item => {
-        const img = item.querySelector('img');
+    items.forEach(function(item) {
+        var img = item.querySelector('img');
         if (img) {
-            const src = img.src;
+            var src = img.src;
             images.push(src);
             item.addEventListener('click', function(e) {
                 e.stopPropagation();
-                const idx = images.indexOf(src);
+                var idx = images.indexOf(src);
                 if (idx !== -1) openLightbox(idx);
             });
         }
@@ -76,11 +76,11 @@
     }
 
     // Event listeners
-    const closeBtn = document.getElementById('lightboxClose');
-    const nextBtn = document.getElementById('lightboxNext');
-    const prevBtn = document.getElementById('lightboxPrev');
-    const zoomInBtn = document.getElementById('lightboxZoomIn');
-    const zoomOutBtn = document.getElementById('lightboxZoomOut');
+    var closeBtn = document.getElementById('lightboxClose');
+    var nextBtn = document.getElementById('lightboxNext');
+    var prevBtn = document.getElementById('lightboxPrev');
+    var zoomInBtn = document.getElementById('lightboxZoomIn');
+    var zoomOutBtn = document.getElementById('lightboxZoomOut');
 
     if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
     if (nextBtn) nextBtn.addEventListener('click', nextImage);
@@ -103,8 +103,8 @@
     });
 
     // Touch swipe support
-    let touchStartX = 0;
-    let touchEndX = 0;
+    var touchStartX = 0;
+    var touchEndX = 0;
 
     overlay.addEventListener('touchstart', function(e) {
         touchStartX = e.changedTouches[0].screenX;
@@ -112,7 +112,7 @@
 
     overlay.addEventListener('touchend', function(e) {
         touchEndX = e.changedTouches[0].screenX;
-        const diff = touchStartX - touchEndX;
+        var diff = touchStartX - touchEndX;
         if (Math.abs(diff) > 50) {
             if (diff > 0) nextImage();
             else prevImage();
@@ -120,9 +120,9 @@
     }, { passive: true });
 
     // Double tap zoom
-    let lastTap = 0;
+    var lastTap = 0;
     overlay.addEventListener('touchend', function(e) {
-        const now = Date.now();
+        var now = Date.now();
         if (now - lastTap < 300 && now - lastTap > 0) {
             if (zoomLevel > 1.5) {
                 zoomLevel = 1;

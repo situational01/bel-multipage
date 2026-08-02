@@ -57,6 +57,7 @@ body {
     color: var(--color-text);
     background: var(--color-white);
     overflow-x: hidden;
+    padding-top: 140px; /* Height of top bar (42px) + navbar (85px) */
 }
 
 .container {
@@ -758,20 +759,20 @@ h6 {
 }
 
 /* ============================================================
-   HERO SECTION - PROFESSIONAL LAYOUT
+   HERO SECTION - FAST SLIDER TRANSITION
    ============================================================ */
 
 .hero {
+    margin-top: 0;
+    padding-top: 0;
+    min-height: calc(100vh - 140px);
+    height: calc(100vh - 140px);
+    max-height: none;
     position: relative;
-    min-height: 100vh;
-    height: 100vh;
-    max-height: 900px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-top: 0;
-    padding-top: 85px;
     background: var(--color-primary);
     width: 100%;
 }
@@ -792,7 +793,7 @@ h6 {
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
-    transition: opacity 1.5s ease;
+    transition: opacity 0.8s ease; /* FAST transition */
 }
 
 .hero-slide.active {
@@ -805,9 +806,9 @@ h6 {
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg,
-            rgba(13, 27, 42, 0.70) 0%,
-            rgba(13, 27, 42, 0.35) 50%,
-            rgba(13, 27, 42, 0.55) 100%);
+            rgba(13, 27, 42, 0.55) 0%,
+            rgba(13, 27, 42, 0.25) 50%,
+            rgba(13, 27, 42, 0.40) 100%);
     z-index: 2;
 }
 
@@ -818,8 +819,6 @@ h6 {
     color: var(--color-white);
     max-width: 750px;
     padding: 40px 24px;
-    margin-top: 120px;
-    align-self: flex-start;
 }
 
 /* Welcome Badge */
@@ -903,154 +902,6 @@ h6 {
     50% {
         opacity: 1;
         transform: scaleY(1.2);
-    }
-}
-
-/* Hero Responsive */
-@media (min-width: 1200px) {
-    .hero {
-        min-height: 100vh;
-        height: 100vh;
-        max-height: 1000px;
-        padding-top: 85px;
-    }
-    
-    .hero-content {
-        max-width: 700px;
-        padding: 40px 30px;
-        margin-top: 150px;
-    }
-    
-    .hero-title {
-        font-size: 52px;
-    }
-    
-    .hero-description {
-        font-size: 17px;
-        max-width: 420px;
-    }
-    
-    .scroll-indicator {
-        bottom: 40px;
-    }
-}
-
-@media (min-width: 1600px) {
-    .hero {
-        max-height: 1100px;
-        padding-top: 85px;
-    }
-    
-    .hero-content {
-        margin-top: 180px;
-        max-width: 800px;
-    }
-    
-    .hero-title {
-        font-size: 58px;
-    }
-}
-
-@media (min-width: 1024px) and (max-width: 1199px) {
-    .hero {
-        min-height: 100vh;
-        height: 100vh;
-        max-height: 900px;
-        padding-top: 85px;
-    }
-    
-    .hero-title {
-        font-size: 46px;
-    }
-    
-    .hero-content {
-        max-width: 620px;
-        margin-top: 130px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    .hero {
-        min-height: 85vh;
-        height: 85vh;
-        max-height: 800px;
-        padding-top: 68px;
-    }
-    
-    .hero-title {
-        font-size: 40px;
-    }
-    
-    .hero-description {
-        font-size: 15px;
-        max-width: 320px;
-    }
-    
-    .hero-content {
-        margin-top: 100px;
-    }
-}
-
-@media (min-width: 480px) and (max-width: 767px) {
-    .hero {
-        min-height: 75vh;
-        height: 75vh;
-        max-height: 700px;
-        padding-top: 68px;
-    }
-    
-    .hero-title {
-        font-size: 32px;
-    }
-    
-    .hero-description {
-        font-size: 14px;
-        max-width: 280px;
-        margin-bottom: 20px;
-    }
-    
-    .hero-content {
-        padding: 24px 20px;
-        margin-top: 80px;
-    }
-}
-
-@media (max-width: 479px) {
-    .hero {
-        min-height: 65vh;
-        height: 65vh;
-        max-height: 600px;
-        padding-top: 68px;
-    }
-    
-    .hero-title {
-        font-size: 26px;
-        margin-bottom: 10px;
-    }
-    
-    .hero-description {
-        font-size: 13px;
-        max-width: 240px;
-        margin-bottom: 18px;
-    }
-    
-    .hero-content {
-        padding: 16px 16px;
-        margin-top: 60px;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-    }
-    
-    .hero-buttons .btn {
-        width: 100%;
-        max-width: 200px;
-        justify-content: center;
-        padding: 10px 16px;
-        font-size: 12px;
     }
 }
 
@@ -2304,6 +2155,10 @@ h6 {
         --section-padding: 60px;
     }
 
+    body {
+        padding-top: 111px; /* Adjusted for mobile header height */
+    }
+
     .top-bar {
         height: 36px;
     }
@@ -2376,10 +2231,8 @@ h6 {
     }
 
     .hero {
-        min-height: 85vh;
-        height: 85vh;
-        max-height: 800px;
-        padding-top: 68px;
+        min-height: calc(100vh - 111px);
+        height: calc(100vh - 111px);
     }
     .hero-title {
         font-size: 40px;
@@ -2387,9 +2240,6 @@ h6 {
     .hero-description {
         font-size: 15px;
         max-width: 320px;
-    }
-    .hero-content {
-        margin-top: 100px;
     }
 
     .service-hero {
@@ -2488,6 +2338,10 @@ h6 {
         --navbar-height: 68px;
     }
 
+    body {
+        padding-top: 100px; /* Adjusted for mobile header height */
+    }
+
     .top-bar {
         height: 32px;
     }
@@ -2512,10 +2366,8 @@ h6 {
     }
 
     .hero {
-        min-height: 65vh;
-        height: 65vh;
-        max-height: 600px;
-        padding-top: 68px;
+        min-height: calc(100vh - 100px);
+        height: calc(100vh - 100px);
     }
     .hero-title {
         font-size: 26px;
@@ -2528,7 +2380,6 @@ h6 {
     }
     .hero-content {
         padding: 16px 16px;
-        margin-top: 60px;
     }
     .hero-buttons {
         flex-direction: column;
@@ -2621,15 +2472,756 @@ h6 {
         font-size: 18px;
     }
 }
-/* Simple Fix - Add a top margin to the body or hero */
-body {
-    padding-top: 140px; /* Height of top bar (42px) + navbar (85px) */
+
+/* ============================================================
+   HERO CTA BUTTON - START A CONVERSATION
+   White default, Blue on hover
+   ============================================================ */
+
+/* Hero Outline Button - Default: White background, blue text */
+.hero .btn-outline-light {
+    padding: 10px 24px;
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--color-white) !important;
+    color: var(--color-accent) !important;
+    border-color: var(--color-accent) !important;
+    box-shadow: none;
+    border-radius: 3px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
 }
 
-.hero {
-    margin-top: 0;
-    padding-top: 0;
-    min-height: calc(100vh - 140px);
-    height: calc(100vh - 140px);
-    max-height: none;
+/* Hero Outline Button - Hover: Blue background, white text */
+.hero .btn-outline-light:hover {
+    background: var(--color-accent) !important;
+    color: var(--color-white) !important;
+    border-color: var(--color-accent) !important;
+    transform: translateY(-1px);
+    box-shadow: none;
+}
+/* ============================================================
+   BUTTONS - NO OUTLINE
+   ============================================================ */
+
+/* Remove outline on all buttons */
+.btn:focus,
+.btn:focus-visible,
+.btn:active,
+button:focus,
+button:focus-visible,
+button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* ============================================================
+   NAVIGATION CTA - START A CONVERSATION BUTTON
+   White default, Blue on hover, NO OUTLINE
+   ============================================================ */
+
+.nav-cta {
+    padding: 8px 18px !important;
+    font-size: 12px !important;
+    border-radius: 3px !important;
+    background: var(--color-white) !important;
+    color: var(--color-accent) !important;
+    border: 2px solid var(--color-accent) !important;
+    box-shadow: none !important;
+    transition: var(--transition);
+    outline: none !important;
+}
+
+.nav-cta:hover {
+    background: var(--color-accent) !important;
+    color: var(--color-white) !important;
+    border-color: var(--color-accent) !important;
+    transform: translateY(-1px);
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.nav-cta:focus,
+.nav-cta:focus-visible,
+.nav-cta:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.nav-cta::after {
+    display: none !important;
+}
+
+/* ============================================================
+   HERO BUTTONS - NO OUTLINE
+   ============================================================ */
+
+.hero .btn-primary {
+    padding: 10px 24px;
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--color-accent);
+    color: var(--color-white);
+    border-color: var(--color-accent);
+    box-shadow: none;
+    border-radius: 3px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    outline: none !important;
+}
+
+.hero .btn-primary:hover {
+    background: var(--color-accent-dark);
+    transform: translateY(-1px);
+    color: var(--color-white);
+    box-shadow: none;
+    outline: none !important;
+}
+
+.hero .btn-primary:focus,
+.hero .btn-primary:focus-visible,
+.hero .btn-primary:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.hero .btn-primary::after {
+    display: none !important;
+}
+
+/* Hero - Start a Conversation (White default, Blue hover) */
+.hero .btn-outline-light {
+    padding: 10px 24px;
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--color-white) !important;
+    color: var(--color-accent) !important;
+    border: 2px solid var(--color-accent) !important;
+    box-shadow: none;
+    border-radius: 3px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    outline: none !important;
+}
+
+.hero .btn-outline-light:hover {
+    background: var(--color-accent) !important;
+    color: var(--color-white) !important;
+    border-color: var(--color-accent) !important;
+    transform: translateY(-1px);
+    box-shadow: none;
+    outline: none !important;
+}
+
+.hero .btn-outline-light:focus,
+.hero .btn-outline-light:focus-visible,
+.hero .btn-outline-light:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* ============================================================
+   GENERAL BUTTON OVERRIDES - NO OUTLINE
+   ============================================================ */
+
+.btn-primary,
+.btn-outline,
+.btn-outline-light,
+.btn {
+    outline: none !important;
+}
+
+.btn-primary:focus,
+.btn-primary:focus-visible,
+.btn-primary:active,
+.btn-outline:focus,
+.btn-outline:focus-visible,
+.btn-outline:active,
+.btn-outline-light:focus,
+.btn-outline-light:focus-visible,
+.btn-outline-light:active,
+.btn:focus,
+.btn:focus-visible,
+.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove outline from all button elements */
+button {
+    outline: none !important;
+}
+
+button:focus,
+button:focus-visible,
+button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+/* ============================================================
+   HEADER NAV CTA - BLUE BUTTON
+   ============================================================ */
+
+.nav-cta {
+    padding: 8px 18px !important;
+    font-size: 12px !important;
+    border-radius: 3px !important;
+    background: var(--color-accent) !important;
+    color: var(--color-white) !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: var(--transition);
+    outline: none !important;
+}
+
+.nav-cta:hover {
+    background: var(--color-accent-dark) !important;
+    color: var(--color-white) !important;
+    transform: translateY(-1px);
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.nav-cta:focus,
+.nav-cta:focus-visible,
+.nav-cta:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.nav-cta::after {
+    display: none !important;
+}
+
+/* ============================================================
+   HERO "START A CONVERSATION" - WHITE, NO BLUE OUTLINE
+   ============================================================ */
+
+.hero .btn-outline-light {
+    padding: 10px 24px;
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--color-white) !important;
+    color: var(--color-accent) !important;
+    border: none !important;
+    box-shadow: none;
+    border-radius: 3px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    outline: none !important;
+}
+
+.hero .btn-outline-light:hover {
+    background: var(--color-accent) !important;
+    color: var(--color-white) !important;
+    transform: translateY(-1px);
+    box-shadow: none;
+    outline: none !important;
+}
+
+.hero .btn-outline-light:focus,
+.hero .btn-outline-light:focus-visible,
+.hero .btn-outline-light:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+/* ============================================================
+   WHY CHOOSE US SECTION
+   ============================================================ */
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+.why-card {
+    background: var(--color-white);
+    padding: 32px 28px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.why-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-accent);
+}
+
+.why-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-accent);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.why-card:hover::before {
+    opacity: 1;
+}
+
+.why-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--color-accent-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 22px;
+    color: var(--color-accent);
+    transition: var(--transition);
+}
+
+.why-card:hover .why-icon {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+.why-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.why-card p {
+    font-size: 14px;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}
+
+/* ============================================================
+   WHY CHOOSE US SECTION - CREATIVE
+   ============================================================ */
+
+.why-choose-us {
+    position: relative;
+    overflow: hidden;
+}
+
+.why-header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.why-card {
+    position: relative;
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: 0;
+    transition: var(--transition);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    cursor: default;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-accent);
+}
+
+.why-card-inner {
+    padding: 32px 28px 28px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Card number - subtle background */
+.why-number {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--color-accent-light);
+    line-height: 1;
+    letter-spacing: -2px;
+    transition: var(--transition);
+    font-family: var(--font-primary);
+}
+
+.why-card:hover .why-number {
+    color: var(--color-accent);
+    opacity: 0.3;
+}
+
+/* Icon wrapper */
+.why-icon-wrapper {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 18px;
+}
+
+.why-icon-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--color-accent);
+    border-radius: 50%;
+    opacity: 0.08;
+    transition: var(--transition);
+    transform: scale(1);
+}
+
+.why-card:hover .why-icon-bg {
+    opacity: 0.15;
+    transform: scale(1.1);
+}
+
+.why-icon {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    background: var(--color-accent-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--color-accent);
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.why-card:hover .why-icon {
+    background: var(--color-accent);
+    color: var(--color-white);
+    transform: scale(1.05);
+}
+
+.why-card-content h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--color-heading);
+}
+
+.why-card-content p {
+    font-size: 14px;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Bottom CTA */
+.why-bottom-cta {
+    text-align: center;
+    padding-top: 16px;
+}
+
+.why-bottom-cta p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 16px;
+}
+
+.why-bottom-cta .btn {
+    padding: 12px 32px;
+    font-size: 14px;
+}
+
+/* Card accent line - top */
+.why-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-accent);
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.why-card:hover::before {
+    opacity: 1;
+}
+
+/* Alternate card styles - like reference image */
+.why-card-1 .why-icon { background: rgba(7, 209, 252, 0.12); color: #07D1FC; }
+.why-card-1:hover .why-icon { background: #07D1FC; color: #fff; }
+
+.why-card-2 .why-icon { background: rgba(42, 125, 225, 0.12); color: #2A7DE1; }
+.why-card-2:hover .why-icon { background: #2A7DE1; color: #fff; }
+
+.why-card-3 .why-icon { background: rgba(0, 200, 150, 0.12); color: #00C896; }
+.why-card-3:hover .why-icon { background: #00C896; color: #fff; }
+
+.why-card-4 .why-icon { background: rgba(255, 170, 0, 0.12); color: #FFAA00; }
+.why-card-4:hover .why-icon { background: #FFAA00; color: #fff; }
+
+.why-card-5 .why-icon { background: rgba(230, 80, 80, 0.12); color: #E65050; }
+.why-card-5:hover .why-icon { background: #E65050; color: #fff; }
+
+.why-card-6 .why-icon { background: rgba(120, 80, 200, 0.12); color: #7850C8; }
+.why-card-6:hover .why-icon { background: #7850C8; color: #fff; }
+
+/* Responsive */
+@media (max-width: 992px) {
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+    
+    .why-card-inner {
+        padding: 24px 20px 20px;
+    }
+    
+    .why-number {
+        font-size: 36px;
+        bottom: 12px;
+        right: 16px;
+    }
+    
+    .why-icon-wrapper {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .why-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 20px;
+    }
+    
+    .why-bottom-cta p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .why-grid {
+        max-width: 100%;
+    }
+    
+    .why-card-inner {
+        padding: 20px 16px 16px;
+    }
+    
+    .why-number {
+        font-size: 28px;
+        bottom: 8px;
+        right: 12px;
+    }
+    
+    .why-icon-wrapper {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 12px;
+    }
+    
+    .why-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+    
+    .why-card-content h3 {
+        font-size: 16px;
+    }
+    
+    .why-card-content p {
+        font-size: 13px;
+    }
+}
+
+/*====================================
+MISSION VISION VALUES
+=====================================*/
+
+.mission-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:0;
+
+    margin-top:60px;
+
+    box-shadow:0 12px 40px rgba(0,0,0,.08);
+
+}
+
+
+.mission-card,
+.mission-image{
+
+    min-height:340px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+}
+
+
+.mission-card{
+
+    padding:60px;
+
+    color:#fff;
+
+}
+
+
+.mission-content{
+
+    max-width:330px;
+
+}
+
+
+.mission-card h3{
+
+    font-size:42px;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+    letter-spacing:1px;
+
+}
+
+
+.mission-card p{
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    opacity:.95;
+
+}
+
+
+/* Background Colours */
+
+.mission{
+
+    background:var(--color-accent);
+
+}
+
+.vision{
+
+    background:var(--color-accent);
+
+}
+
+.values{
+
+    background:var(--color-accent);
+
+}
+
+
+/* Images */
+
+.mission-image{
+
+    background:#fff;
+
+}
+
+
+.mission-image img{
+
+    width:65%;
+
+    max-width:260px;
+
+    object-fit:contain;
+
+    opacity:.85;
+
+}
+
+
+/* Hover */
+
+.mission-card,
+.mission-image{
+
+    transition:.35s;
+
+}
+
+
+.mission-card:hover,
+.mission-image:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.mission-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.mission-card,
+.mission-image{
+
+    min-height:260px;
+
+}
+
+.mission-card{
+
+    padding:40px;
+
+}
+
+.mission-card h3{
+
+    font-size:32px;
+
+}
+
 }

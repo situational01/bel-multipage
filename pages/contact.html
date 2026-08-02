@@ -35,38 +35,6 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://www.broadexperiential.com/pages/contact.html">
     
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "name": "Contact Broad Experiential Ltd",
-        "description": "Get in touch with Broad Experiential Ltd for branding services across East Africa.",
-        "url": "https://www.broadexperiential.com/pages/contact.html",
-        "about": {
-            "@type": "Organization",
-            "name": "Broad Experiential Ltd",
-            "telephone": "+254-722-636-674",
-            "email": "sales@broadexperiential.com",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Epren Centre, Mumias South Rd, 2nd Floor, Suite 4",
-                "addressLocality": "Nairobi",
-                "addressCountry": "KE"
-            }
-        }
-    }
-    </script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
-
     <!-- CSS & Fonts -->
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -217,6 +185,29 @@
         </div>
     </section>
 
+    <!-- Map Section - Nairobi Location Only -->
+    <section class="map-section section-padding-lg bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Find Us</span>
+                <h2 class="section-title">Visit Our <span>Studio</span></h2>
+                <p class="section-description">We're located in the heart of Nairobi, ready to bring your brand to life</p>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.35853743783!2d36.68219672264773!3d-1.302861111626027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2s!4v1691234567890" 
+                    width="100%" 
+                    height="350" 
+                    style="border:0; border-radius: 8px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Broad Experiential Nairobi Location">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
     <style>
         .contact-grid {
             display: grid;
@@ -335,31 +326,17 @@
             gap: 16px;
         }
 
-        .notification {
-            position: fixed;
-            top: 100px;
-            right: 24px;
-            padding: 14px 22px;
-            border-radius: var(--radius-sm);
-            color: var(--color-white);
-            font-weight: 500;
-            font-size: 14px;
-            z-index: 9999;
-            transform: translateX(120%);
-            transition: var(--transition);
-            box-shadow: var(--shadow-lg);
+        /* Map Styles */
+        .map-container {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
         }
 
-        .notification.show {
-            transform: translateX(0);
-        }
-
-        .notification-success {
-            background: var(--color-success);
-        }
-
-        .notification-error {
-            background: var(--color-error);
+        .map-container iframe {
+            display: block;
+            width: 100%;
+            height: 350px;
         }
 
         @media (max-width: 768px) {
@@ -374,6 +351,9 @@
         @media (max-width: 480px) {
             .contact-form-wrapper {
                 padding: 24px 20px;
+            }
+            .map-container iframe {
+                height: 250px;
             }
         }
     </style>
