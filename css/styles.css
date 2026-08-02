@@ -3495,3 +3495,190 @@ button:active {
         max-height: 1200px;
     }
 }
+/* ============================================================
+   SECTION HEADER WITH FADED BACKGROUND TEXT
+   ============================================================ */
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding: 20px 0 10px;
+}
+
+/* Large faded text behind everything - USING !important */
+.section-header::before {
+    content: attr(data-label) !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    font-size: clamp(70px, 10vw, 130px) !important;
+    font-weight: 900 !important;
+    color: rgba(13, 27, 42, 0.04) !important;
+    letter-spacing: 6px !important;
+    text-transform: uppercase !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+    white-space: nowrap !important;
+    font-family: 'Inter', sans-serif !important;
+    line-height: 1 !important;
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: var(--color-accent, #07D1FC);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    background: rgba(7, 209, 252, 0.1);
+    padding: 6px 20px;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    color: var(--color-heading, #0D1B2A);
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title span {
+    color: var(--color-accent, #07D1FC);
+}
+
+.section-description {
+    font-size: 17px;
+    color: var(--color-text-light, #4A5A6E);
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.65;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .section-header::before {
+        font-size: 80px !important;
+        letter-spacing: 4px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header::before {
+        font-size: 55px !important;
+        letter-spacing: 3px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header::before {
+        font-size: 35px !important;
+        letter-spacing: 2px !important;
+    }
+}
+
+/* ============================================================
+   SECTION HEADER WITH FADED BACKGROUND TEXT - GLOBAL
+   ============================================================ */
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding: 20px 0 10px;
+}
+
+/* Large faded text behind everything */
+.section-header::before {
+    content: attr(data-label) !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    font-size: clamp(70px, 10vw, 130px) !important;
+    font-weight: 900 !important;
+    color: rgba(13, 27, 42, 0.04) !important;
+    letter-spacing: 6px !important;
+    text-transform: uppercase !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+    white-space: nowrap !important;
+    font-family: 'Inter', sans-serif !important;
+    line-height: 1 !important;
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: var(--color-accent, #07D1FC);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    background: rgba(7, 209, 252, 0.1);
+    padding: 6px 20px;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    color: var(--color-heading, #0D1B2A);
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title span {
+    color: var(--color-accent, #07D1FC);
+}
+
+.section-description {
+    font-size: 17px;
+    color: var(--color-text-light, #4A5A6E);
+    max-width: 550px;
+    margin: 0 auto;
+    line-height: 1.65;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .section-header::before {
+        font-size: 80px !important;
+        letter-spacing: 4px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header::before {
+        font-size: 55px !important;
+        letter-spacing: 3px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header::before {
+        font-size: 35px !important;
+        letter-spacing: 2px !important;
+    }
+}
